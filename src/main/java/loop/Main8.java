@@ -9,9 +9,8 @@ public class Main8 {
         List<String> words = List.of("bread", "milk", "egg");
         List<String> newWords = new ArrayList<>();
         for(int i=0; i<words.size(); i++) {
-            newWords.add(i + ". " + words.get(i));
+            newWords.add((i+1) + "." + words.get(i));
         }
-        System.out.println(newWords);
 
         // ints 리스트에 Integer 자료형으로 옮기시오
         List<Double> nums = List.of(1.12, 2.23, 3.34, 4.45);
@@ -19,7 +18,8 @@ public class Main8 {
 
         System.out.println(nums);
         for(Double num : nums) {
-            ints.add((int)Math.round(num));
+//          ints.add((int)Math.round(num));
+            ints.add((int)(double)num);
         }
         List<Integer> integer = nums.stream()
                 .mapToInt(num -> (int)Math.round(num))
